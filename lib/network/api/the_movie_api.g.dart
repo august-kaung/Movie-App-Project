@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'tmdb_api.dart';
+part of 'the_movie_api.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,8 +8,8 @@ part of 'tmdb_api.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
-class _TheMovieDBAPI implements TheMovieDBAPI {
-  _TheMovieDBAPI(
+class _TheMovieAPI implements TheMovieAPI {
+  _TheMovieAPI(
     this._dio, {
     this.baseUrl,
   }) {
@@ -21,7 +21,7 @@ class _TheMovieDBAPI implements TheMovieDBAPI {
   String? baseUrl;
 
   @override
-  Future<MovieResponse> getNowPlayingMovies(
+  Future<MovieResponse> getResponse(
     apiKey,
     page,
   ) async {

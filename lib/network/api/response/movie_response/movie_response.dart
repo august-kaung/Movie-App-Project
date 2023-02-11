@@ -21,6 +21,7 @@ class MovieResponse{
       this.dates, this.page, this.results, this.totalPages, this.totalResults);
   factory MovieResponse.fromJson(Map<String,dynamic>json)=>_$MovieResponseFromJson(json);
   Map<String,dynamic>toJson()=>_$MovieResponseToJson(this);
+
 }
 
 

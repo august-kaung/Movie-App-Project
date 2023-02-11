@@ -12,6 +12,7 @@ class MovieDate{
   MovieDate(this.maximum, this.minimum);
   factory MovieDate.fromJson(Map<String,dynamic>json)=>_$MovieDateFromJson(json);
   Map<String,dynamic>toJson()=>_$MovieDateToJson(this);
+
 }
 
 

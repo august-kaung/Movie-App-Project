@@ -1,19 +1,19 @@
 
 import 'package:flutter/material.dart';
+import 'package:movie_project/Pages/home_page.dart';
 
 void main(){
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyApp()
-  ));
+  runApp(const MyApp()
+  );
 }
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.amberAccent,
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
     );
   }
 }

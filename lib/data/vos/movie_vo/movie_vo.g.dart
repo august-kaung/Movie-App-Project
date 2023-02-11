@@ -21,11 +21,14 @@ MovieVO _$MovieVOFromJson(Map<String, dynamic> json) => MovieVO(
       json['video'] as bool?,
       json['vote_average'] as num?,
       json['vote_count'] as int?,
+      isGetNowPlaying: json['isGetNowPlaying'] as bool? ?? false,
+      isPopularMovies: json['isPopularMovies'] as bool? ?? false,
+      isTopRated: json['isTopRated'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$MovieVOToJson(MovieVO instance) => <String, dynamic>{
       'adult': instance.adult,
-      'backdrop_path': instance.backdropPath,
+      'backdrop_path': instance.backDrop,
       'genre_ids': instance.genreIds,
       'id': instance.id,
       'original_language': instance.originalLanguage,
@@ -38,4 +41,7 @@ Map<String, dynamic> _$MovieVOToJson(MovieVO instance) => <String, dynamic>{
       'video': instance.video,
       'vote_average': instance.voteAverage,
       'vote_count': instance.voteCount,
+      'isGetNowPlaying': instance.isGetNowPlaying,
+      'isPopularMovies': instance.isPopularMovies,
+      'isTopRated': instance.isTopRated,
     };
