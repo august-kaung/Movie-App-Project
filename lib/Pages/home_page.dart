@@ -39,17 +39,16 @@ class _HomePageState extends State<HomePage> {
                     if (snapShot.connectionState == ConnectionState.waiting) {
                       return  const Center(child: CircularProgressIndicator(),);
                     }
-                    // if (snapShot.hasError) {
-                    //   return  const Center(child: Text('Error Occur'),);
-                    // }
+                    if (snapShot.hasError) {
+                      return  const Center(child: Text('Error Occur'),);
+                    }
                     //var ta khu build lite tl
-                    final movieBanner = snapShot.data?.take(5).toList();
-
+                    final movieBanner = snapShot.data?.take(5).toList()??[];
                     return PageView.builder(
-                        itemCount: movieBanner ?.length,
+                        itemCount: movieBanner .length,
                         itemBuilder: (context, index) =>
                             BannerMovieItemView(
-                                movieVO: movieBanner ? [index])
+                                movieVO: movieBanner[index])
                     );
                   }
               ),
@@ -64,11 +63,11 @@ class _HomePageState extends State<HomePage> {
 class BannerMovieItemView extends StatelessWidget {
   const BannerMovieItemView({Key? key, required this.movieVO})
       : super(key: key);
-  final MovieVO ? movieVO;
+  final MovieVO  movieVO;
 
   @override
   Widget build(BuildContext context) {
-    var image = movieVO?.backDrop;
+    var image = movieVO.backDrop;
     return Image.network('$kPrefixImageLink$image');
   }
 }

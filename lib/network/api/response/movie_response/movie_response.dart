@@ -7,7 +7,7 @@ part 'movie_response.g.dart';
 @JsonSerializable()
 class MovieResponse{
   @JsonKey(name: 'dates')
-  List<MovieDate> ? dates;
+  MovieDate ? dates;
   @JsonKey(name: 'page')
   int ? page;
   @JsonKey(name: 'results')
